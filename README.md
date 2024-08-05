@@ -6,6 +6,12 @@ LoanPro has built a new, state of the art calculator that’s set to revolutioni
 * If you use automation tools or custom code, provide the source code and instructions on how to run those
 
 ## Running the tests
+
+
+https://github.com/user-attachments/assets/819e4b9a-8f91-4877-a04b-82670779354d
+
+
+
 There's two ways for running the tests:
 ### With Python 
 Having python and docker installed in any OS, pull or download the repository.
