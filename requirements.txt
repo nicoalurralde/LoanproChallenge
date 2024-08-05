@@ -1,0 +1,4 @@
+python_on_whales===0.72.0  # Needed to run docker containers
+pytest===8.3.2  # For tests and parametrization
+numpy===2.0.1  # To clean numbers and do extra precise math
+pytest-xdist==3.6.1  # Enables to run tests in parallel
