@@ -17,18 +17,21 @@ There's two ways for running the tests:
 Having python and docker installed in any OS, pull or download the repository.
 From the root folder execute it with: 
 
-`python -m pytest -r A -n auto tests/`
+>`python -m pytest -r A -n auto tests/`
 
 
 ### With Docker
 There's an available image of the repository with all the tests already there. This method might run into
 some docker-in-docker issues but I was able to run it successfully on MacOS (silicon) but not on Linux (arm64).
 
-`docker pull nalurralde/loanpro-challenge:latest` 
+>`docker pull nalurralde/loanpro-challenge:latest` 
 
 Execute it with:
 
-`docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker nalurralde/loanpro-challenge:latest` (might take ~1 minute to start)
+>`docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -e workers=4 nalurralde/loanpro-challenge:latest`
+
+_(might take ~1 minute to start)_
+
 
 ## Expected output
 The execution should run the pytest tests (~210) and some of them should fail.
