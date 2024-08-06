@@ -39,5 +39,16 @@ class Calculator:
             return result
         except DockerException as e:
             return str(e)
+    
+    def operation_no_numbers(self) -> str:
+        """Takes any operations and runs the Docker container with the parameters.
+         Has no validations
+         returns string
+        """
+        try:
+            result = docker.run(self.container, [self.operation_type], remove=True)
+            return result
+        except DockerException as e:
+            return str(e)
 
 

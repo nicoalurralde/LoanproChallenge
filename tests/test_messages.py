@@ -6,6 +6,7 @@ divide_zero = "Error: Cannot divide by zero"
 unknown_operation = "Error: Unknown operation: "
 invalid_argument = "Invalid argument. Must be a numeric value."
 not_a_number = "Result: NaN"
+supported_operations = "Supported operations: add, subtract, multiply, divide"
 
 
 def test_positive_zero_division_message():
@@ -29,3 +30,6 @@ def test_invalid_argument_message():
 def test_not_a_number_message():
     assert not_a_number in Calculator(operation_type="divide").operation_raw(number_a="1e1000", number_b="1e1000")
 
+
+def test_supported_operations_message():
+    assert supported_operations in Calculator(operation_type="divide").operation_no_numbers()
