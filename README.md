@@ -24,11 +24,11 @@ From the root folder execute it with:
 There's an available image of the repository with all the tests already there. This method might run into
 some docker-in-docker issues but I was able to run it successfully on MacOS (silicon) but not on Linux (arm64).
 
-`docker pull docker.io/nalurralde/loanpro-challenge:latests` 
+`docker pull nalurralde/loanpro-challenge:latest` 
 
 Execute it with:
 
-`docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker loanpro-challenge:latests` (might take ~1 minute to start)
+`docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker nalurralde/loanpro-challenge:latest` (might take ~1 minute to start)
 
 ## Expected output
 The execution should run the pytest tests (~210) and some of them should fail.
